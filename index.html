@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutali | Software Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Mutali, a tech enthusiast and software developer specializing in Python, Java, AI, and web development.">
+    <meta name="keywords" content="Mutali, Portfolio, Software Developer, Python, Java, AI, Web Development, Nairobi, Kenya">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #a8cff5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            color: #000208;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: #05219c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #05219c;
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: #05219c;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #05219c;
+            text-decoration: none;
+        }
+        
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('Hero1.jpg') center center/cover no-repeat;
+            color: white;
+            text-align: left;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            text-align: left;
+            margin-left: 0;
+            align-items: flex-start;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            text-align: left;
+            margin-left: 0;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+        
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            margin: 15px auto;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            object-fit: fill;
+            border: 5px solid #3498db;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-card i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        
+        /* Education Section */
+        .education-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .education-item h3 {
+            color: #3498db;
+        }
+        
+        .cv-download {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        /* Interests Section */
+        #interests {
+            background-color: white;
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .interest-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #3498db;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-img {
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-links a {
+            flex: 1;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-item i {
+            font-size: 24px;
+            color: #3498db;
+        }
+        
+        form {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 24px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, Welcome to my Portfolio.<br> I am Mutali.</br></h1>
+                <p>A tech enthusiast developing experience as a developer with code and innovation.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I am a motivated learner in software development with a passion for technology and innovation. As an enthusiast in modern technological evolution, I am fascinated with transformational innovations which incorporate software development, programming and creatively using disruptive technologies to solve social problems.</p>
+                    <p>My journey in technology began when I disassembled my mother's FM radio at the age of 6. Since then, I have been captivated by how electronics work and my fascinations grew wilder after learning about programming and coding, which captured my curiosity based on their power to solve real-world problems and create meaningful digital experiences.</p>
+                    <p>Through my curiosity and passion in programming, I have been able to learn different coding languages including Python, C, and Java.</p>
+                    <p>What drives me is the constant evolution of technology and the opportunity to learn something new every day. I thrive on challenges and enjoy collaborating with teams to bring innovative ideas to life.</p>
+                </div>
+                <div class="about-image">
+                    <img src="plp-logo.jpg" alt="Portrait of Mutali, Software Developer" width="100" height="100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Programming Languages &amp; Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-python" aria-hidden="true"></i>
+                    <h3>Python</h3>
+                    <p>Knowledgeable in Python, AI and Machine Learning frameworks, and data analysis libraries</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java" aria-hidden="true"></i>
+                    <h3>Java</h3>
+                    <p>I have some knowledge in Java programming and understand the basics of Spring Boot and Android development.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <h3>HTML/CSS</h3>
+                    <p>I am currently learning how to build responsive website design, CSS frameworks, and their accessibility</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-laptop-code" aria-hidden="true"></i>
+                    <h3>C</h3>
+                    <p>Knowledgeable in C programming.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <h3>SQL</h3>
+                    <p>Learning database design and optimization with PostgreSQL, MySQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>Cybersecurity.</h3>
+                <p><strong>CISCO Networking Academy</strong> | 2025</p>
+                <p>Relevant coursework: Cybersecurity essentials: Network Security, Cyber OPs, Data Security.</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Technology in Computer and Electronics Systems. </h3>
+                <p><strong>Mount Kenya University</strong> | 2019 - 2025</p>
+                <p>Awaiting graduation. Undertook a research project on the use of AI and Machine Learning to address human-wildlife conflicts in Africa through edge computing.</p>
+            </div>
+            <!--Download CV link-->
+            <div class="cv-download">
+                <a href="Resume.pdf" class="btn" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <div class="container">
+            <h2 class="section-title">Professional Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>I am fascinated by the potential of AI to transform industries. Currently exploring deep learning models and their applications in solving complex problems.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Aerospace Innovation</h3>
+                    <p>Space travel and the application of revolutionary technology like AI, VR and AR in supporting aeronautical engineering for space exploration is the future of humanity.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Developer Experience</h3>
+                    <p>Improving tools and workflows for developers is crucial for innovation. I contribute to open-source projects that enhance developer productivity.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Mobile Development</h3>
+                    <p>With mobile devices being the primary way people access the internet, creating seamless mobile experiences is more important than ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Chatbot</h3>
+                        <p>Developing a chatbot using Python and TensorFlow that provides real-time payment support for e-commerce platforms in Kenya using WhatsApp Business.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Tool</h3>
+                        <p>Machine learning application using Python, TensorFlow, and React that monitors wild animals movement and sends alerts to human settlements around areas of encroachment via SMS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:your.email@example.com">mtalin001@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+1234567890">+254702724427</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Nairobi, KE</p>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+            <p>&copy; 2025 Mutali. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Download CV functionality
+        const cvDownload = document.querySelector('.cv-download .btn');
+        cvDownload.addEventListener('click', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would link to your actual CV file
+            alert('CV download would start here in a real implementation.');
+        });
+    </script>
+</body>
+</html>
