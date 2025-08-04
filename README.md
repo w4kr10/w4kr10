@@ -1,5 +1,7 @@
 ## Hello, this is my repository with records of my website development and hackathons.
 
+The 'Portfolio' branch contains detailed documentation of the codes and files used in developing the website.
+
 <!--
 **w4kr10/w4kr10** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
